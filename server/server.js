@@ -23,6 +23,7 @@ io.on("connection", (socket) => {
       return callback("Name and room name are required.");
     }
     params.room = params.room.toLowerCase();
+    params.name = params.name.toLowerCase();
     if (!users.uniqueUserName(params.name, params.room)) {
       return callback("Username already choosen! Choose another");
     }
